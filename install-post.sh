@@ -255,16 +255,6 @@ if [ "${XS_NOENTREPO,,}" == "yes" ] ; then
     fi
 fi
 
-# rebuild and add non-free to /etc/apt/sources.list
-cat <<EOF > /etc/apt/sources.list
-deb https://ftp.debian.org/debian ${OS_CODENAME} main contrib
-deb https://ftp.debian.org/debian ${OS_CODENAME}-updates main contrib
-# non-free
-deb https://httpredir.debian.org/debian/ ${OS_CODENAME} main contrib non-free
-# security updates
-deb https://security.debian.org/debian-security ${OS_CODENAME}-security main contrib
-EOF
-
 # Refresh the package lists
 apt-get update > /dev/null 2>&1
 
