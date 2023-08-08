@@ -304,7 +304,8 @@ if [ "${XS_UTILS,,}" == "yes" ] ; then
     vim-nox \
     wget \
     whois \
-    zip
+    zip \
+    libguestfs-tools
 fi
 
 if [ "${XS_CEPH,,}" == "yes" ] ; then
